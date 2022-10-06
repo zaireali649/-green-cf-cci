@@ -1,0 +1,25 @@
+{
+    "Resources": {
+        "S3Bucket001": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": "zali-green-cf-template-01"
+            }
+        },
+		"S3Bucket002": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": "zali-green-cf-template-02"
+            }
+        },
+		"MyEC2Instance" : {
+		   "Type" : "AWS::EC2::Instance",
+		   "Properties" : {
+			  "ImageId" : "ami-026b57f3c383c2eec",
+			  "KeyName" : "private-ec2",
+			  "InstanceType" : "t2.micro",
+			  "SecurityGroupIds" : ["sg-0197b8159a5d886f8"]
+		   }
+		}
+    }
+}
